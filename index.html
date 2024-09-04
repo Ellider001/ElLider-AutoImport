@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Lider AutoImport</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="https://wallpapersmug.com/download/1024x768/7524b0/web-minimal-venom-art.jpg" alt="Logo" class="logo">
+        <h1>El Lider AutoImport</h1>
+        
+        <div class="container-icon">
+            <div class="container-cart-icon">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="icon-cart"
+                >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
+                    />
+                </svg>
+                <div class="count-products">
+                    <span id="contador-productos">0</span>
+                </div>
+            </div>
+
+            <div class="container-cart-products hidden-cart">
+                <div class="row-product hidden">
+                    <!-- Productos se insertan aquí dinámicamente -->
+                </div>
+                <div class="cart-total hidden">
+                    <h3>Total:</h3>
+                    <span class="total-pagar">$0</span>
+                </div>
+                <p class="cart-empty">El carrito está vacío</p>
+            </div>
+        </div>
+    </header>
+    <div class="container-items">
+        <div class="item">
+            <figure>
+                <img src="https://img.supercarros.com/AdsPhotos/1024x768/0/12380971.jpg?wmo=74386a17e10ac13025351530b93b61d1e5410ebb6c942937b89397c8c445d3a026fa9d7793ba382d4d519d53e49e1edb5e2d844abad12867edd182c888c7c2e7" alt="producto"/>
+            </figure>
+            <div class="info-product">
+                <h2>Mercedes Benz Clase C300 2018</h2>
+                <p class="price">$1,250,000.00</p>
+                <button class="btn-add-cart">Añadir al carrito</button>
+            </div>
+        </div>
+        <div class="item">
+            <figure>
+                <img src="https://arabam-blog.mncdn.com/wp-content/uploads/2020/09/2020-mercedes-amg-gle-53-suv-white-tung-nguyen-1001x565-1-1024x578.jpg" alt="producto"/>
+            </figure>
+            <div class="info-product">
+                <h2>Mercedes Benz AMG GLE 63 2020</h2>
+                <p class="price">$11,550,000.00</p>
+                <button class="btn-add-cart">Añadir al carrito</button>
+            </div>
+        </div>
+        <div class="item">
+            <figure>
+                <img src="https://www.cnet.com/a/img/resize/cb6e757d6c0206581cbed544575ccb3b62739e55/hub/2020/09/04/7a5768e9-3136-4040-8105-ae70c4289fcd/2021-mercedes-amg-gle53-coupe-ogi.jpg?auto=webp&fit=crop&height=900&width=1200" alt="producto"/>
+            </figure>
+            <div class="info-product">
+                <h2>Mercedes Benz AMG GLE 53 2022</h2>
+                <p class="price">$9,450,000.00</p>
+                <button class="btn-add-cart">Añadir al carrito</button>
+            </div>
+        </div>
+        <div class="item">
+            <figure>
+                <img src="https://www.sveauto.com/imagetag/375/main/l/Used-2019-Mercedes-Benz-AMG-C63-S-CPE-AMG-C-63-S-1652504866.jpg" alt="Producto"/>
+            </figure>
+            <div class="info-product">
+                <h2>Mercedes Benz C63 Coupe 2020</h2>
+                <p class="price">$2,650,000.00</p>
+                <button class="btn-add-cart">Añadir al carrito</button>
+            </div>
+        </div>
+        <div class="item">
+            <figure>
+                <img src="https://img.supercarros.com/AdsPhotos/1024x768/0/11847112.jpg?wmo=d153f4c2eed3ad6de538cd68ca8b8f6a9f672db3ba52d5ef89fe4925f9f222fd508535cbf6fa8c487a46179edca5b4cba1852f687d3dc4b0efbc655802207daf" alt="producto"/>
+            </figure>
+            <div class="info-product">
+                <h2>Mercedes Benz G63 AMG 2023</h2>
+                <p class="price">$12,350,000.00</p>
+                <button class="btn-add-cart">Añadir al carrito</button>
+            </div>
+        </div>
+        <div class="item">
+            <figure>
+                <img src="https://vehiculoperfecto.com/wp-content/uploads/2023/06/WhatsApp-Image-2022-12-15-at-12.57.00-PM-1.jpeg" alt="Producto">
+            </figure>
+            <div class="info-product">
+                <h2>Toyota 4-Runner 2020</h2>
+                <p class="price">$1,850,000.00</p>
+                <button class="btn-add-cart">Añadir al carrito</button>
+            </div>
+        </div>
+        <div class="item">
+            <figure>
+                <img src="https://img.supercarros.com/AdsPhotos/1024x768/0/11384272.jpg?wmo=880159bfda2fc2f899ac348731c96666998edc8599da03e7ec9afcd9fc1141192c1d113d8b2ffe0adf56b8e5c6f6b7611e321a47a710cd56bab9a0d73854706c" alt="Producto">
+            </figure>
+            <div class="info-product">
+                <h2>Honda Civic 2021</h2>
+                <p class="price">$920,000.00</p>
+                <button class="btn-add-cart">Añadir al carrito</button>
+            </div>
+        </div>
+        <div class="item">
+            <figure>
+                <img src="https://http2.mlstatic.com/D_NQ_NP_2X_798403-MRD77657372123_072024-T.webp" alt="Producto">
+            </figure>
+            <div class="info-product">
+                <h2>Honda Accord 2020</h2>
+                <p class="price">$1,200,000.00</p>
+                <button class="btn-add-cart">Añadir al carrito</button>
+            </div>
+        </div>
+        <div class="item">
+            <figure>
+                <img src="https://img.supercarros.com/AdsPhotos/1024x768/0/12253386.jpg?wmo=ddd6e5cc0de8ddc169474a2d6eebec3f523aa7e41f337eeed436857129e113171ee0be34ac5554f92e508d72a4aec41cf023df53a5314bfe9deab2cb107decc6" alt="Producto">
+            </figure>
+            <div class="info-product">
+                <h2>Honda CR-V 2022</h2>
+                <p class="price">$2,000,000.00</p>
+                <button class="btn-add-cart">Añadir al carrito</button>
+            </div>
+        </div>
+            <div class="item">
+                <figure>
+                    <img src="https://www.pressherald.com/wp-content/uploads/sites/4/2018/10/IMG_8416.jpg?w=1024" alt="Producto">
+                </figure>
+                <div class="info-product">
+                    <h2>Dodge challenger SRT hellcat 2019</h2>
+                    <p class="price">$2,950,000.00</p>
+                    <button class="btn-add-cart">Añadir al carrito</button>
+                </div>
+            </div>
+            <div class="item">
+                    <figure>
+                        <img src="https://www.autotrader.ca/editorial/media/189700/2020-dodge-charger-hellcat-widebody-03-dw.jpg?width=1920&height=1080&v=1d6c84021e81b90" alt="Producto">
+                    </figure>
+                    <div class="info-product">
+                        <h2>Dodge charger SRT hellcat 2019</h2>
+                        <p class="price">$2,175,000.00</p>
+                        <button class="btn-add-cart">Añadir al carrito</button>
+                    </div>
+                </div>
+                <div class="item">
+                    <figure>
+                        <img src="https://i.pinimg.com/736x/04/b3/27/04b32770a6a4b55ea8260b6792b243cf.jpg" alt="Producto">
+                    </figure>
+                    <div class="info-product">
+                        <h2>JEEP GRAND CHEROKEE TRACKHAWK 2019</h2>
+                        <p class="price">$5,700,000.00</p>
+                        <button class="btn-add-cart">Añadir al carrito</button>
+                    </div>
+                </div>
+                <div class="item">
+                    <figure>
+                        <img src="https://img.supercarros.com/AdsPhotos/1024x768/0/12400138.jpg?wmo=7d1bdf7825c7ce9516ae310c64b7dba2db6d037613a2f2d416e92596ffa108dd03cc6eb33142e9ac441a2bc676062a53d54d39a936f2d94ab8ef73c47b1d15e3" alt="Producto">
+                    </figure>
+                    <div class="info-product">
+                        <h2>Tesla Model 3 2019</h2>
+                        <p class="price">$2,200,000.00</p>
+                        <button class="btn-add-cart">Añadir al carrito</button>
+                    </div>
+                    <!-- PlantillaAgregar producto-->
+                </div>
+                <div class="item">
+                    <figure>
+                        <img src="https://carsguide-res.cloudinary.com/image/upload/f_auto,fl_lossy,q_auto,t_default/v1/editorial/2020-Lexus-RC-F-EP3-JC-white-(30).JPG" alt="Producto">
+                    </figure>
+                    <div class="info-product">
+                        <h2>Lexux RC F Sport 2019</h2>
+                        <p class="price">$2,900,000.00</p>
+                        <button class="btn-add-cart">Añadir al carrito</button>
+                    </div>
+                    <!-- Final plantilla -->
+
+                      <!-- PlantillaAgregar producto-->
+                </div>
+                <div class="item">
+                    <figure>
+                        <img src="https://jmautomotriz.mx/wp-content/uploads/2024/02/WhatsApp-Image-2024-02-09-at-6.02.45-PM-1.jpeg" alt="Producto">
+                    </figure>
+                    <div class="info-product">
+                        <h2>Chevrolet tahoe 2022</h2>
+                        <p class="price">$4,700,000.00</p>
+                        <button class="btn-add-cart">Añadir al carrito</button>
+                    </div>
+                    <!-- Final plantilla -->
+
+                    <!-- PlantillaAgregar producto-->
+                </div>
+                <div class="item">
+                    <figure>
+                        <img src="https://www.cnet.com/a/img/resize/4476006d1312ec379ee616af256b7596321b3742/hub/2021/08/20/257caf0a-f3a2-45db-9c70-d6ed50a85e6f/2021-toyota-camry-trd-ogi-1.jpg?auto=webp&fit=crop&height=900&width=1200" alt="Producto">
+                    </figure>
+                    <div class="info-product">
+                        <h2>Toyota Camry 2020</h2>
+                        <p class="price">$880,000.00</p>
+                        <button class="btn-add-cart">Añadir al carrito</button>
+                    </div>
+                    <!-- Final plantilla -->
+
+                    <!-- PlantillaAgregar producto-->
+                </div>
+                <div class="item">
+                    <figure>
+                        <img src="https://www.corotos.com.do/imagenes/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCRGZFYndJPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--930389682ae0f3430ab1c0d8b315a1537171f3b0/kiak52014___0_jpeg?variant_options%5Bformat%5D=webp&variant_options%5Bresize_to_fit%5D%5B%5D=1280&variant_options%5Bresize_to_fit%5D%5B%5D=720" alt="Producto">
+                    </figure>
+                    <div class="info-product">
+                        <h2>kia K5 2014</h2>
+                        <p class="price">$450,000.00</p>
+                        <button class="btn-add-cart">Añadir al carrito</button>
+                    </div>
+                    <!-- Final plantilla -->
+
+                    <!-- PlantillaAgregar producto-->
+                </div>
+                <div class="item">
+                    <figure>
+                        <img src="https://credimeta.com/wp-content/uploads/2022/02/GOPR3125.jpg" alt="Producto">
+                    </figure>
+                    <div class="info-product">
+                        <h2>Hyundai Sonata Y20 2016</h2>
+                        <p class="price">$410,000.00</p>
+                        <button class="btn-add-cart">Añadir al carrito</button>
+                    </div>
+                    <!-- Final plantilla -->
+
+                    <!-- PlantillaAgregar producto-->
+                </div>
+                <div class="item">
+                    <figure>
+                        <img src="https://carrosrd-media.s3.amazonaws.com/listings/22814/m_15926828370125312.jpg" alt="Producto">
+                    </figure>
+                    <div class="info-product">
+                        <h2>Ford Mustang 2017</h2>
+                        <p class="price">$1,100,000.00</p>
+                        <button class="btn-add-cart">Añadir al carrito</button>
+                    </div>
+                    <!-- Final plantilla -->
+
+                    <!-- PlantillaAgregar producto-->
+                </div>
+                <div class="item">
+                    <figure>
+                        <img src="https://i.ytimg.com/vi/8KUu9d7LfVA/maxresdefault.jpg" alt="Producto">
+                    </figure>
+                    <div class="info-product">
+                        <h2>Audi R8 2018</h2>
+                        <p class="price">$4,200,000.00</p>
+                        <button class="btn-add-cart">Añadir al carrito</button>
+                    </div>
+                    <!-- Final plantilla -->
+
+                    <!-- PlantillaAgregar producto-->
+                </div>
+                <div class="item">
+                    <figure>
+                        <img src="https://f1-sportwagen.de/wp-content/uploads/McLaren-Coupe-1.jpg" alt="Producto">
+                    </figure>
+                    <div class="info-product">
+                        <h2>Mclaren 650S Coupe 2018</h2>
+                        <p class="price">$12,800,000.00</p>
+                        <button class="btn-add-cart">Añadir al carrito</button>
+                    </div>
+                    <!-- Final plantilla -->
+
+                     <!-- PlantillaAgregar producto-->
+                </div>
+                <div class="item">
+                    <figure>
+                        <img src="https://img.supercarros.com/AdsPhotos/1024x768/0/12412412.jpg?wmo=b7328b8dc7b059bb83f8e337d7a82f79e2eea22e2b22dced1ed95625d259e85cf295fdeb9f8ef892f6fbe602c0a151976dfbe8f48bbdcfac15e808556b72bfc7" alt="Producto">
+                    </figure>
+                    <div class="info-product">
+                        <h2>Ram 1500 TRX 2024</h2>
+                        <p class="price">$9,800,000.00</p>
+                        <button class="btn-add-cart">Añadir al carrito</button>
+                    </div>
+                    <!-- Final plantilla -->
+
+                     <!-- PlantillaAgregar producto-->
+                </div>
+                <div class="item">
+                    <figure>
+                        <img src="https://cdn2.laclave.com.do/images/cut-anuncios/Toyota+Hilux+SRV+Limited+2022-172445888697187211-400x300-jpg.webp" alt="Producto">
+                    </figure>
+                    <div class="info-product">
+                        <h2>Toyota Hilux 2019</h2>
+                        <p class="price">$2,900,000.00</p>
+                        <button class="btn-add-cart">Añadir al carrito</button>
+                    </div>
+                    <!-- Final plantilla -->
+
+                     <!-- PlantillaAgregar producto-->
+                </div>
+                <div class="item">
+                    <figure>
+                        <img src="https://carrosrd-media.s3.amazonaws.com/listings/61645/m_17139739980284137.jpg" alt="Producto">
+                    </figure>
+                    <div class="info-product">
+                        <h2>Ford Explorer 2021</h2>
+                        <p class="price">$2,100,000.00</p>
+                        <button class="btn-add-cart">Añadir al carrito</button>
+                    </div>
+                    <!-- Final plantilla -->
+
+                    <!-- PlantillaAgregar producto-->
+                </div>
+                <div class="item">
+                    <figure>
+                        <img src="https://carrosrd-media.s3.amazonaws.com/listings/57176/m_16999965760315377.jpg?1" alt="Producto">
+                    </figure>
+                    <div class="info-product">
+                        <h2>Jeep Wrangler Unlimited 2018</h2>
+                        <p class="price">$2,250,000.00</p>
+                        <button class="btn-add-cart">Añadir al carrito</button>
+                    </div>
+                    <!-- Final plantilla -->
+
+                    <!-- PlantillaAgregar producto-->
+                </div>
+                <div class="item">
+                    <figure>
+                        <img src="https://www.phbrothers.com/dealer2/uploads/listings/pics1188/IMG_665EC8-5D2300-6BAC98-7DEF2A-761FE3-FDD948.jpg" alt="Producto">
+                    </figure>
+                    <div class="info-product">
+                        <h2>Lamborghini Urus 2022</h2>
+                        <p class="price">$27,400,000.00</p>
+                        <button class="btn-add-cart">Añadir al carrito</button>
+                    </div>
+                    <!-- Final plantilla -->
+
+                    <!-- PlantillaAgregar producto-->
+                </div>
+                <div class="item">
+                    <figure>
+                        <img src="https://carrosrd-media.s3.amazonaws.com/listings/65762/m_17248780410161745.jpg?1" alt="Producto">
+                    </figure>
+                    <div class="info-product">
+                        <h2>Porsche 911 GT3 2022</h2>
+                        <p class="price">$13,200,000.00</p>
+                        <button class="btn-add-cart">Añadir al carrito</button>
+                    </div>
+                    <!-- Final plantilla -->
+                </div>
+            </div>
+                    <script src="index.js"></script>
+                </body>
+                </html>
+                
+                <footer class="footer">
+                    <div class="footer-content">
+                        <div class="footer-section about">
+                            <h2>Sobre Nosotros</h2>
+                            <p>En El Líder AutoImport, nos especializamos en ofrecer una amplia gama de vehículos de alta calidad para satisfacer todas tus necesidades automotrices. Desde autos deportivos hasta SUVs familiares, nuestra misión es ayudarte a encontrar el vehículo perfecto que se ajuste a tu estilo de vida. ¡Descubre la excelencia en cada conducción con nosotros!</p>
+                        </div>
+                        <div class="footer-section links">
+                            <h2>Enlaces Rápidos</h2>
+                            <ul>
+                                <li><a href="#">Inicio</a></li>
+                                <li><a href="#">Productos</a></li>
+                                <li><a href="#">Contacto</a></li>
+                                <li><a href="#">Sobre Nosotros</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-section contact">
+                            <h2>Contacto</h2>
+                            <p>Dirección: San isidro, Dominican Republic</p>
+                            <p>Teléfono: +123 456 789</p>
+                            <p>Email: gameranthony22@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="footer-bottom">
+                        <p>&copy; 2024 Anthony de Jesus Encarnacion Vargas. Todos los derechos reservados.</p>
+                    </div>
+                </footer>
+
+                
