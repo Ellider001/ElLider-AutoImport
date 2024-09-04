@@ -20,23 +20,20 @@ btnCart.addEventListener('click', () => {
 productsList.addEventListener('click', e => {
     if (e.target.classList.contains('btn-add-cart')) {
         const product = e.target.closest('.item');
-        const infoProduct = {
-            quantity: 1,
-            title: product.querySelector('h2').textContent,
-            price: product.querySelector('.price').textContent.replace('$', ''),
-        };
+        const title = product.querySelector('h2').textContent;
+        const priceText = product.querySelector('.price').textContent;
+        const price = parseFloat(priceText.replace(/[$,]/g, '')); // Elimina el signo $ y las comas
 
-        const exists = allProducts.some(prod => prod.title === infoProduct.title);
+        const existingProduct = allProducts.find(prod => prod.title === title);
 
-        if (exists) {
-            allProducts = allProducts.map(prod => {
-                if (prod.title === infoProduct.title) {
-                    prod.quantity++;
-                }
-                return prod;
-            });
+        if (existingProduct) {
+            existingProduct.quantity++;
         } else {
-            allProducts.push(infoProduct);
+            allProducts.push({
+                title,
+                price,
+                quantity: 1
+            });
         }
 
         showHTML();
@@ -83,7 +80,7 @@ const showHTML = () => {
             <div class="info-cart-product">
                 <span class="cantidad-producto-carrito">${product.quantity}</span>
                 <p class="titulo-producto-carrito">${product.title}</p>
-                <span class="precio-producto-carrito">${product.price}</span>
+                <span class="precio-producto-carrito">$${product.price.toFixed(2)}</span>
             </div>
             <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -103,10 +100,7 @@ const showHTML = () => {
 
         rowProduct.append(containerProduct);
 
-        // Extraer el precio como número
-        const priceNumber = parseFloat(product.price.replace('$', '')); // Convierte el precio a un número flotante
-
-        total += product.quantity * priceNumber;
+        total += product.quantity * product.price;
         totalOfProducts += product.quantity;
     });
 
